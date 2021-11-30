@@ -3,6 +3,9 @@ import './App.css';
 import Hello  from './components/Hello';
 import Counter from './components/Counter';
 
+import ListProducts from './components/ListProducts';
+//import {ListProducts} from "./components/ListProducts";
+
 function App() {
   return (
     <div className="App">
@@ -25,8 +28,10 @@ function App() {
         {/* <Hello message="React"/>
         <Hello message="Training"/> */}
 
-        <Counter message="React"/>
-        <Counter message="Mumbai"/>
+        {/* <Counter message="React"/>
+        <Counter message="Mumbai"/> */}
+
+        <ListProducts/>
        
       </section>
     </div>
