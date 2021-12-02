@@ -21,6 +21,9 @@ class Counter extends Component{
         });
        
     }
+
+    
+
     decr = () => {
         console.log("decr..");
         const updatedCount = this.state.count - 1;

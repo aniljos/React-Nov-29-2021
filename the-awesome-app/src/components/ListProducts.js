@@ -119,6 +119,8 @@ class ListProducts extends PureComponent{
                                 onSave={this.editUpdate}
                                 onCancel={this.editCancel}/> : null}
                 </div>
+
+                <input type="text" />
             </div>
         )
     }

@@ -18,3 +18,16 @@ console.log("numbers",numbers);
 console.log("copy_of_numbers", copy_of_numbers);
 
 
+const values = ["abc", "xyz"];
+
+// const x = values[0];
+// const y = values[1];
+
+//destructuring(es6)
+
+const [x, y] = values;
+
+
+
+
+
