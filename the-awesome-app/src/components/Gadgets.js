@@ -1,14 +1,18 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios';
+import {useSelector} from 'react-redux';
 
 function Gadgets(){
 
     const [products, setProducts] = useState([]);
+    //const authData = useSelector(reduxState => reduxState.auth);
+    const authData = useSelector((reduxState) => { return reduxState.auth});
     //const [count, setCount] = useState(0);
 
     console.log("outside use effect...");   
     useEffect(() => {
         console.log("in use effect...componentDidMount");   
+        console.log("authData", authData);
         fetch();
 
         //equivalent of the componentWillUnmount

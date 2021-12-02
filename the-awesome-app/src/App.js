@@ -5,6 +5,7 @@ import ListProducts from './components/ListProducts';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import Gadgets from './components/Gadgets';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
               <Route path="/counter" component={Counter}/>
               <Route path="/products" component={ListProducts}/>
               <Route path="/gadgets" component={Gadgets}/>
+              <Route path="/login" component={Login}/>
           
         </section>
       </div>
