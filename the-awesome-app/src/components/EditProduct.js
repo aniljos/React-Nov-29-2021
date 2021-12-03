@@ -64,24 +64,24 @@ class EditProduct extends Component{
             <div>
                 <h4>Edit Product : {this.state.product.id}</h4>
 
-                <div>
-                    <label>Name</label>
-                    <input placeholder="Name" name="name"
+                <div className="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" className="form-control" placeholder="Name" name="name"
                                 value={this.state.product.name} onChange={this.change}/>
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Price</label>
-                    <input type="number" placeholder="Price" name="price"
+                    <input className="form-control" type="number" placeholder="Price" name="price"
                                 value={this.state.product.price} onChange={this.changePrice}/>
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Desc</label>
-                    <input placeholder="Desc" name="description"
+                    <input className="form-control" placeholder="Desc" name="description"
                             value={this.state.product.description} onChange={this.change}/>
                 </div>
                 <div>
-                    <button onClick={this.save}>Save</button> &nbsp;
-                    <button onClick={this.cancel}>Cancel</button>
+                    <button className="btn btn-success" onClick={this.save}>Save</button> &nbsp;
+                    <button  className="btn btn-danger"onClick={this.cancel}>Cancel</button>
                 </div>
             </div>
         )

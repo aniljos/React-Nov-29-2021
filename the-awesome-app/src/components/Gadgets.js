@@ -29,8 +29,11 @@ function Gadgets(){
 
         try {
             
-            const url = "http://localhost:9000/products";
-            const response = await axios.get(url);
+            //const url = "http://localhost:9000/products";
+            //const url = "http://localhost:9000/secure_products";
+            const url = process.env.REACT_APP_PRODUCTSURL;
+            const headers = {Authorization : `Bearer ${authData.accessToken}`};
+            const response = await axios.get(url, {headers: headers});
             setProducts(response.data);
             console.log(response);
 

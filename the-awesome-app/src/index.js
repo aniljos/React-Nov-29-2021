@@ -5,11 +5,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './redux/store';
 import { Provider } from "react-redux";
+import { AppTheme } from './context/AppTheme';
+import AppThemeProvider from './context/AppThemeProvider';
+
+const theme = {
+  mode: "light"
+}
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      {/* <AppTheme.Provider value={theme}>
+          <App />
+      </AppTheme.Provider> */}
+      <AppThemeProvider>
+          <App/>
+      </AppThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -105,8 +105,8 @@ class ListProducts extends PureComponent{
                                 <p>Description: {item.description}</p>
                                 <p>Price: {item.price}</p>
                                 <div>
-                                    <button onClick={() => {this.delete(item)}}>Delete</button>&nbsp;
-                                    <button onClick={() => this.edit(item)}>Edit</button>
+                                    <button className="btn btn-danger" onClick={() => {this.delete(item)}}>Delete</button>&nbsp;
+                                    <button className="btn btn-warning" onClick={() => this.edit(item)}>Edit</button>
                                 </div>
                             </div>
                         );
@@ -120,7 +120,7 @@ class ListProducts extends PureComponent{
                                 onCancel={this.editCancel}/> : null}
                 </div>
 
-                <input type="text" />
+                
             </div>
         )
     }

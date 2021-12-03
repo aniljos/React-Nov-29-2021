@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import {useDispatch} from 'react-redux';
+
+
+
 function Login(props){
 
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+    //let invalidLoginAttempts = 0;
+    const invalidLoginAttempts  =useRef(0);
+    const userNameRef = useRef(null);
+   
     //dispatch is a method of redux to dispatch an action
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        
+        userNameRef.current.focus();
+
+    }, [])
+
     async function login(){
+     
         console.log(userName, password);
 
         try {
@@ -32,6 +46,10 @@ function Login(props){
                 accessToken: "",
                 refreshToken: ""
             }});
+            // invalidLoginAttempts++;
+            // console.log("invalidLoginAttempts", invalidLoginAttempts);
+            invalidLoginAttempts.current++;
+            console.log("invalidLoginAttempts", invalidLoginAttempts);
         }
     }
     return(
@@ -42,7 +60,7 @@ function Login(props){
             
             <p>UserName</p>
             <div>
-                <input className="form-control" value={userName} 
+                <input className="form-control" value={userName} ref={userNameRef}
                                             onChange={(e) => setUserName(e.target.value) }/>
             </div>
             <p>Password</p>

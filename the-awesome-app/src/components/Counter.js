@@ -48,11 +48,11 @@ class Counter extends Component{
                 <p>This is a class component</p>
                 <p>Message: {this.props.message}</p>
                 <div>
-                    <button onClick={this.inc}>Inc</button>&nbsp;
-                    <button onClick={this.decr}>Decr</button>
+                    <button className="btn btn-success" onClick={this.inc}>Inc</button>&nbsp;
+                    <button className="btn btn-danger" onClick={this.decr}>Decr</button>
                 </div>
                 <div>
-                    Count: <input type="number" placeholder="Count" 
+                    Count: <input className="form-control" type="number" placeholder="Count" 
                                     value={this.state.count} onChange={this.change}/>
                 </div>
             </div>
