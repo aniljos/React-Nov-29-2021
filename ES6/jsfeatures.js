@@ -27,6 +27,13 @@ const values = ["abc", "xyz"];
 
 const [x, y] = values;
 
+const obj = {
+    id: 1, name: "anil"
+}
+
+//const id = obj.id;
+const {id, name} = obj;
+
 
 
 
